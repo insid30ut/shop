@@ -10,11 +10,10 @@ const insforge = createClient({
   anonKey: process.env.NEXT_PUBLIC_INSFORGE_ANON_KEY || "dummy",
 });
 
-export default async function ProductPage({
-  params,
-}: {
-  params: { id: string };
+export default async function ProductPage(props: {
+  params: Promise<{ id: string }>;
 }) {
+  const params = await props.params;
   const { id } = params;
 
   // Fetch the product

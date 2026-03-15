@@ -30,11 +30,11 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex flex-col gap-10">
+    <main aria-label="Home Page" className="min-h-screen bg-slate-950 text-white selection:bg-emerald-500/30 flex flex-col gap-10">
       <section className="py-20 text-center flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-slate-900 via-emerald-900/20 to-slate-900 rounded-3xl border border-white/5">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-          Superior Genetics
-        </h1>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
+          Uncompromising Quality
+        </h2>
         <p className="text-xl text-slate-400 max-w-2xl px-4">
           Discover premium mushroom spore prints, swabs, and top-tier cultivation supplies.
         </p>
@@ -86,6 +86,6 @@ export default async function Home() {
           </div>
         )}
       </section>
-    </div>
+    </main>
   );
 }

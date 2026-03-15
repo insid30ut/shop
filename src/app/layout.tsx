@@ -11,8 +11,26 @@ import { Cart } from "@/components/Cart";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mycology Supply Store",
+  title: {
+    template: "%s | Mycology Supply Store",
+    default: "Mycology Supply Store - Premium Genetics",
+  },
   description: "Premium spore prints, swabs, and cultivation supplies.",
+  openGraph: {
+    title: "Mycology Supply Store - Premium Genetics",
+    description: "Premium spore prints, swabs, and cultivation supplies.",
+    url: "https://mycelialfunguy.com",
+    siteName: "Mycology Supply Store",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -51,7 +51,7 @@ export function AddToCartButton({ product, variant }: AddToCartProps) {
           ? "bg-slate-700 opacity-50 cursor-not-allowed shadow-none"
           : isAdded
           ? "bg-emerald-600 shadow-emerald-900/40"
-          : "bg-purple-600 hover:bg-purple-500 shadow-purple-900/40"
+          : "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/40"
       }`}
     >
       {disabled ? "Out of Stock" : isAdded ? "Added to Cart!" : "Add to Cart"}

@@ -31,7 +31,7 @@ export default async function Dashboard() {
           <img
             src={user.profile.avatar_url}
             alt="Avatar"
-            className="w-16 h-16 rounded-full border-2 border-purple-500"
+            className="w-16 h-16 rounded-full border-2 border-emerald-500"
           />
         )}
         <div>
@@ -65,7 +65,7 @@ export default async function Dashboard() {
                       <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 capitalize">
                         {order.status}
                       </span>
-                      <div className="mt-2 font-bold text-lg text-purple-300">
+                      <div className="mt-2 font-bold text-lg text-emerald-300">
                         ${(order.total_amount / 100).toFixed(2)}
                       </div>
                     </div>
@@ -88,7 +88,7 @@ export default async function Dashboard() {
           ) : (
             <div className="text-center py-12 text-slate-500">
               <p>You haven't placed any orders yet.</p>
-              <a href="/" className="inline-block mt-4 text-purple-400 hover:text-purple-300 font-medium transition-colors">
+              <a href="/" className="inline-block mt-4 text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
                 Browse our store
               </a>
             </div>

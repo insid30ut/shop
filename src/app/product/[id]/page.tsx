@@ -55,7 +55,7 @@ export default async function ProductPage({
 
       <div className="w-full md:w-1/2 flex flex-col gap-6 pt-4">
         <div>
-          <span className="text-purple-400 font-medium tracking-wider text-sm uppercase mb-2 block">
+          <span className="text-emerald-400 font-medium tracking-wider text-sm uppercase mb-2 block">
             {product.category || "Genetics"}
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">

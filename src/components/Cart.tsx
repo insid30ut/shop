@@ -33,7 +33,7 @@ export function Cart() {
       >
         <ShoppingCart className="w-6 h-6" />
         {totalItems() > 0 && (
-          <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full shadow-lg border-2 border-slate-900">
+          <span className="absolute -top-1 -right-1 bg-emerald-600 text-white text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full shadow-lg border-2 border-slate-900">
             {totalItems()}
           </span>
         )}
@@ -55,7 +55,7 @@ export function Cart() {
       >
         <div className="flex items-center justify-between p-6 border-b border-white/10">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <ShoppingCart className="w-5 h-5 text-purple-400" />
+            <ShoppingCart className="w-5 h-5 text-emerald-400" />
             Your Cart
           </h2>
           <button
@@ -94,7 +94,7 @@ export function Cart() {
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
                     <h4 className="font-semibold text-sm line-clamp-1">{item.name}</h4>
-                    <p className="text-xs text-purple-300 font-medium">
+                    <p className="text-xs text-emerald-300 font-medium">
                       {item.variantName}
                     </p>
                   </div>
@@ -146,7 +146,7 @@ export function Cart() {
             </div>
             <button
               onClick={handleCheckout}
-              className="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl shadow-lg shadow-purple-900/40 transition-all active:scale-[0.98]"
+              className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-900/40 transition-all active:scale-[0.98]"
             >
               Checkout
             </button>

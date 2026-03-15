@@ -40,15 +40,15 @@ export function ProductOptions({ product, variants }: ProductOptionProps) {
               key={variant.id}
               className={`relative flex items-start p-4 cursor-pointer rounded-xl border transition-all ${
                 selectedVariantId === variant.id
-                  ? "border-purple-500 bg-purple-500/10 ring-2 ring-purple-500"
-                  : "border-white/20 hover:border-purple-500/50 hover:bg-white/5"
+                  ? "border-emerald-500 bg-emerald-500/10 ring-2 ring-emerald-500"
+                  : "border-white/20 hover:border-emerald-500/50 hover:bg-white/5"
               } gap-4 group`}
             >
               <div className="flex items-center h-6">
                 <input
                   name="variant"
                   type="radio"
-                  className="w-5 h-5 accent-purple-600 bg-slate-800 border-white/20"
+                  className="w-5 h-5 accent-emerald-600 bg-slate-800 border-white/20"
                   value={variant.id}
                   checked={selectedVariantId === variant.id}
                   onChange={() => setSelectedVariantId(variant.id)}
@@ -69,7 +69,7 @@ export function ProductOptions({ product, variants }: ProductOptionProps) {
                 </span>
               </div>
               <div className="ml-4 flex-shrink-0 flex items-center h-full">
-                <span className="font-bold text-lg text-purple-300">
+                <span className="font-bold text-lg text-emerald-300">
                   $
                   {(
                     (variant.price > 0 ? variant.price : product.base_price) /
@@ -84,7 +84,7 @@ export function ProductOptions({ product, variants }: ProductOptionProps) {
             <span className="block text-sm font-medium text-slate-200">
               Standard Edition
             </span>
-            <span className="mt-2 text-xl font-bold text-purple-300">
+            <span className="mt-2 text-xl font-bold text-emerald-300">
               ${(product.base_price / 100).toFixed(2)}
             </span>
           </div>

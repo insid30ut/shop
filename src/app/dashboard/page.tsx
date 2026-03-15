@@ -1,6 +1,7 @@
 import { auth } from "@insforge/nextjs/server";
 import { createClient } from "@insforge/sdk";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default async function Dashboard() {
   // 1. Get user session from server-side cookies
@@ -73,6 +74,7 @@ export default async function Dashboard() {
                   
                   {/* Order Items list */}
                   <div className="flex flex-col gap-3">
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     {order.order_items.map((item: any) => (
                       <div key={item.id} className="flex justify-between items-center text-sm">
                         <span className="text-slate-300">
@@ -87,10 +89,10 @@ export default async function Dashboard() {
             </div>
           ) : (
             <div className="text-center py-12 text-slate-500">
-              <p>You haven't placed any orders yet.</p>
-              <a href="/" className="inline-block mt-4 text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
+              <p>You haven&apos;t placed any orders yet.</p>
+              <Link href="/" className="inline-block mt-4 text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
                 Browse our store
-              </a>
+              </Link>
             </div>
           )}
         </div>

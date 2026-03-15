@@ -8,6 +8,7 @@ import {
 } from "@insforge/nextjs";
 import { InsforgeProvider } from "./providers";
 import { Cart } from "@/components/Cart";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -46,11 +47,11 @@ export default function RootLayout({
           <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
               <div className="flex gap-6 md:gap-10">
-                <a href="/" className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-2">
                   <span className="inline-block font-bold text-xl tracking-tight">
                     MycoStore
                   </span>
-                </a>
+                </Link>
                 <nav className="hidden gap-6 md:flex">
                   <span className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
                     <Cart />
@@ -65,7 +66,7 @@ export default function RootLayout({
                 </SignedOut>
 
                 <SignedIn>
-                  <a href="/dashboard" className="text-sm font-medium hover:underline mr-4">Dashboard</a>
+                  <Link href="/dashboard" className="text-sm font-medium hover:underline mr-4">Dashboard</Link>
                   <UserButton />
                 </SignedIn>
               </div>

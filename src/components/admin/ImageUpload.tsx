@@ -25,6 +25,7 @@ export default function ImageUpload({ value, onChange }: { value: string; onChan
 
       const publicUrl = insforge.storage.from('images').getPublicUrl(filePath);
       onChange(publicUrl);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       alert(`Upload failed: ${error.message}`);
     } finally {

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import ImageUpload from "./ImageUpload";
 import { insforge } from "@/lib/insforge";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function ProductForm({ initialData }: { initialData?: any }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);

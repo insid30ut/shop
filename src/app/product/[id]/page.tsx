@@ -69,6 +69,7 @@ export default async function ProductPage(props: {
         <div className="h-px w-full bg-white/10 my-4"></div>
 
         <div className="mt-8">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           <ProductOptions product={product as any} variants={variants || []} />
         </div>
       </div>

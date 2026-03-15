@@ -18,8 +18,8 @@ export default async function AdminOrderDetailPage(props: { params: Promise<{ id
   if (error || !order) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-2xl font-bold text-white mb-2">Order Not Found</h1>
-        <p className="text-slate-400">The order you're looking for does not exist.</p>
+        <h2 className="text-2xl font-bold text-white mb-2">Order Not Found</h2>
+        <p className="text-slate-400">The order you&apos;re looking for does not exist.</p>
         <Link href="/admin/orders" className="mt-6 text-emerald-400 hover:text-emerald-300">
           Back to Orders
         </Link>
@@ -27,10 +27,11 @@ export default async function AdminOrderDetailPage(props: { params: Promise<{ id
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const shipping = order.shipping_details as any;
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
+    <div aria-label="Order Details Page" className="space-y-6 max-w-4xl mx-auto">
       <Link href="/admin/orders" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">
         <ArrowLeft className="w-4 h-4" />
         Back to Orders
@@ -83,6 +84,7 @@ export default async function AdminOrderDetailPage(props: { params: Promise<{ id
               Order Items
             </div>
             <div className="bg-slate-950 rounded-xl border border-slate-800 overflow-hidden divide-y divide-slate-800">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {order.order_items?.map((item: any) => (
                 <div key={item.id} className="p-4 flex justify-between items-start text-sm">
                   <div>

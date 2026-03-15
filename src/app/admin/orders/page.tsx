@@ -44,6 +44,7 @@ export default async function AdminOrdersPage() {
             </thead>
             <tbody className="divide-y divide-slate-800/50">
               {orders?.map((order) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const customerName = (order.shipping_details as any)?.name || "Unknown Customer";
                 return (
                   <tr key={order.id} className="hover:bg-slate-800/50 transition-colors">
